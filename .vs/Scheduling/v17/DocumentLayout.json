@@ -1,0 +1,186 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\operatingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:operatingsystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\highestindexpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:highestindexpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\firstcomefirstservedpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:firstcomefirstservedpolicy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\idlecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:idlecode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\processconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:processconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\cpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:cpu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\addressspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:addressspace.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\processtableentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:processtableentry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|d:\\work\\teaching\\os\\assignments\\assignment 2\\scheduling\\outputconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{D1AA8FF3-2201-488D-8F3F-D72FFC4840BD}|Scheduling.csproj|solutionrelative:outputconsole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 8,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HighestIndexPolicy.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\HighestIndexPolicy.cs",
+              "RelativeDocumentMoniker": "HighestIndexPolicy.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\HighestIndexPolicy.cs",
+              "RelativeToolTip": "HighestIndexPolicy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAwAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:11:59.585Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ProcessConsole.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\ProcessConsole.cs",
+              "RelativeDocumentMoniker": "ProcessConsole.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\ProcessConsole.cs",
+              "RelativeToolTip": "ProcessConsole.cs",
+              "ViewState": "AQIAABwAAAAAAAAAAAAcwDIAAAAjAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-08T22:03:08.849Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FirstComeFirstServedPolicy.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\FirstComeFirstServedPolicy.cs",
+              "RelativeDocumentMoniker": "FirstComeFirstServedPolicy.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\FirstComeFirstServedPolicy.cs",
+              "RelativeToolTip": "FirstComeFirstServedPolicy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T12:01:29.328Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "AddressSpace.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\AddressSpace.cs",
+              "RelativeDocumentMoniker": "AddressSpace.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\AddressSpace.cs",
+              "RelativeToolTip": "AddressSpace.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T11:42:05.506Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ProcessTableEntry.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\ProcessTableEntry.cs",
+              "RelativeDocumentMoniker": "ProcessTableEntry.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\ProcessTableEntry.cs",
+              "RelativeToolTip": "ProcessTableEntry.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAcAAAACAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T10:56:22.53Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "OutputConsole.cs [Design]",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\OutputConsole.cs",
+              "RelativeDocumentMoniker": "OutputConsole.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\OutputConsole.cs [Design]",
+              "RelativeToolTip": "OutputConsole.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-31T09:30:20.61Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CPU.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\CPU.cs",
+              "RelativeDocumentMoniker": "CPU.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\CPU.cs",
+              "RelativeToolTip": "CPU.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAArwDQAAAAdAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T23:02:05.669Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IdleCode.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\IdleCode.cs",
+              "RelativeDocumentMoniker": "IdleCode.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\IdleCode.cs",
+              "RelativeToolTip": "IdleCode.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T23:02:05.747Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OperatingSystem.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\OperatingSystem.cs",
+              "RelativeDocumentMoniker": "OperatingSystem.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\OperatingSystem.cs",
+              "RelativeToolTip": "OperatingSystem.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAABJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T23:02:05.749Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\Work\\Teaching\\OS\\Assignments\\Assignment 2\\Scheduling\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwDcAAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-30T23:02:05.75Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
