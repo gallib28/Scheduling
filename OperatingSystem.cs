@@ -8,7 +8,13 @@ using System.Text;
 namespace Scheduling
 {
     class OperatingSystem
-    {
+    {   
+        public Dictionary<int, ProcessTableEntry> ProcessTable {
+            get { return m_dProcessTable; }
+        } 
+        
+        private ProcessTableEntry m_idleProcess; // משתנה לתהליך Idle
+
         public Disk Disk { get; private set; }
         public CPU CPU { get; private set; }
         private Dictionary<int, ProcessTableEntry> m_dProcessTable;
@@ -17,6 +23,7 @@ namespace Scheduling
         private SchedulingPolicy m_spPolicy;
         private static int IDLE_PROCESS_ID = 0;
 
+        public IdleCode idlepro{get;}
         public OperatingSystem(CPU cpu, Disk disk, SchedulingPolicy sp)
         {
             CPU = cpu;
@@ -29,10 +36,30 @@ namespace Scheduling
 
             
             // creating the file for idle
-            // IdleCode idleCode = new IdleCode();
-            // CreateProcess("IdleProcess", idleCode);
+            m_idleProcess = new ProcessTableEntry(IDLE_PROCESS_ID, "Idle", new IdleCode());
+            m_idleProcess.Done = false;
+            m_idleProcess.Blocked = false;
+
+
+            m_dProcessTable.Add(IDLE_PROCESS_ID, m_idleProcess);
+
 
         }
+
+
+        private void ScheduleNextProcess()
+        {
+            int nextProcessId = m_spPolicy.NextProcess(m_dProcessTable);
+
+            if (nextProcessId == -1)
+            {
+                nextProcessId = IDLE_PROCESS_ID;
+            }
+
+            // עדכון ה-CPU עם התהליך הבא
+            CPU.SetProcess(m_dProcessTable[nextProcessId]);
+        }
+
 
         private int GenerateUniqueId()
         {
@@ -81,11 +108,13 @@ namespace Scheduling
         {
             ActivateScheduler();
         }
-
+        public ProcessTableEntry PublicContextSwitch(int iEnteringProcessId)
+        {
+            return ContextSwitch(iEnteringProcessId);
+        }
         public void ReadToken(string sFileName, int iTokenNumber, int iProcessId, string sParameterName)
         {
-            ReadTokenRequest request = new ReadTokenRequest();
-            request.ProcessId = iProcessId;
+            ReadTokenRequest request = new ReadTokenRequest(iProcessId,null);
             request.TokenNumber = iTokenNumber;
             request.TargetVariable = sParameterName;
             request.Token = null;
@@ -109,6 +138,13 @@ namespace Scheduling
             {
                 throw new ArgumentException($"Process with ID {processId} does not exist.");
             }
+        }
+        public void HandleInterrupt()
+        {
+            Console.WriteLine("Interrupt accepted");
+
+            // קריאה לתהליך הבא
+            ScheduleNextProcess();
         }
 
 
@@ -224,17 +260,45 @@ namespace Scheduling
                 ContextSwitch(iNextProcessId);
                 Console.WriteLine($"Switching to process: {iNextProcessId}");
             }
+            ScheduleNextProcess();
         }
 
         public double AverageTurnaround()
         {
-            //Compute the average time from the moment that a process enters the system until it terminates.
-            throw new NotImplementedException();
+            double totalTurnaroundTime = 0;
+            int completedProcesses = 0;
+
+            foreach (var process in m_dProcessTable.Values)
+            {
+                if (process.Done)
+                {
+                    totalTurnaroundTime += process.EndTime - process.StartTime; // זמן סיום פחות זמן התחלה
+                    completedProcesses++;
+                }
+            }
+
+            if (completedProcesses == 0)
+            {
+                return 0; // אין תהליכים שהסתיימו
+            }
+
+            return totalTurnaroundTime / completedProcesses; // זמן ממוצע
         }
         public int MaximalStarvation()
         {
-            //Compute the maximal time that some project has waited in a ready stage without receiving CPU time.
-            throw new NotImplementedException();
+            int maxStarvation = 0;
+
+            foreach (var process in m_dProcessTable.Values)
+            {
+                if (!process.Done && !process.Blocked)
+                {
+                    int starvationTime = CPU.TickCount - process.LastCPUTime; // חישוב הזמן מאז הפעם האחרונה שהתהליך רץ
+                    process.MaxStarvation = Math.Max(process.MaxStarvation, starvationTime); // עדכון ה-MaxStarvation של התהליך
+                    maxStarvation = Math.Max(maxStarvation, process.MaxStarvation); // עדכון ה-MaxStarvation המקסימלי
+                }
+            }
+
+            return maxStarvation;
         }
     private void RunExample2()
         {
@@ -251,7 +315,16 @@ namespace Scheduling
             Console.WriteLine("All processes have completed their execution.");
         }
 
-    
+    public void ProcessFinished(int processId)
+    {
+        Console.WriteLine($"Process {processId} done.");
+        var p = m_dProcessTable[processId];
+        p.EndTime = CPU.TickCount; // הגדרת זמן הסיום
+        p.Done = true; 
+        // קריאה לתהליך הבא
+        ScheduleNextProcess();
+    }
+
     
     
     }

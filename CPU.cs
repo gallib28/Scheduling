@@ -69,23 +69,20 @@ namespace Scheduling
 
         public void ExecuteLine()
         {
-            try
+            if (RemainingTime > 0)
             {
-                if (ProgramCounter == ActiveAddressSpace.Code.LineCount)
-                    OperatingSystem.ProcessTerminated(null);
-                else
+                Console.WriteLine($"Executing line {ProgramCounter}");
+
+                RemainingTime--; // הפחת זמן שנותר
+
+                if (RemainingTime == 0)
                 {
-                    string sLine = ActiveAddressSpace.Code[ProgramCounter];
-                    if(Debug)
-                        Console.WriteLine("pid " + ActiveProcess + "," + ProgramCounter + ": " + sLine);
-                    ProgramCounter = ExecuteLine(sLine);
+                    // הזמן נגמר, דרוש תזמון מחדש
+                    OperatingSystem.TimeoutReached();
                 }
             }
-            catch (Exception e)
-            {
-                OperatingSystem.ProcessTerminated(e);
-            }
         }
+
 
         private int ExecuteLine(string sLine)
         {
@@ -227,6 +224,10 @@ namespace Scheduling
         private void DefineVariable(string[] asLine)
         {
             ActiveAddressSpace[asLine[1]] = 0.0;
+        }
+        public void SetProcess(ProcessTableEntry process)
+        {
+            m_iActiveProcess = process.ProcessId;
         }
     }
 }

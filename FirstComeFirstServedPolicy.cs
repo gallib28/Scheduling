@@ -14,28 +14,32 @@ namespace Scheduling
         {
             while (m_qReadyQueue.Count > 0)
             {
-                int processId = m_qReadyQueue.Peek();
+                int processId = m_qReadyQueue.Peek(); // מקבל את התהליך הראשון בתור
                 var process = dProcessTable[processId];
-                if (!process.Blocked && !process.Done)
-                    return processId; // תהליך מוכן
-                m_qReadyQueue.Dequeue(); // הסר תהליכים חסומים או סיימו
-            }
-        return -1; // אין תהליכים מוכנים
 
-            throw new NotImplementedException();
+                // אם התהליך אינו חסום ולא סיים, החזר את ה-ID שלו
+                if (!process.Blocked && !process.Done)
+                {
+                    return processId;
+                }
+
+                // הסר תהליכים חסומים או שסיימו
+                m_qReadyQueue.Dequeue();
+            }
+            return -1;
         }
 
         public override void AddProcess(int iProcessId)
         {
             m_qReadyQueue.Enqueue(iProcessId);
 
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public override bool RescheduleAfterInterrupt()
         {
             return false;
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
     }
 }

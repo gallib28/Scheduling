@@ -9,12 +9,19 @@ namespace Scheduling
     {
         private SortedDictionary<int, Queue<int>> m_qPriorityQueues = new SortedDictionary<int, Queue<int>>(); // תור תהליכים לפי עדיפויות
         private int m_iQuantum; // גודל ה-quantum
+        private OperatingSystem? m_os; 
         public PrioritizedScheduling(int iQuantum)
         {
             m_iQuantum = iQuantum;
         }
+        public PrioritizedScheduling(int iQuantum, OperatingSystem os)
+        {
+            m_iQuantum = iQuantum;
+            m_os = os;
+        }
 
-        public override int NextProcess(Dictionary<int, ProcessTableEntry> dProcessTable)
+        
+            public override int NextProcess(Dictionary<int, ProcessTableEntry> dProcessTable)
         {
             foreach (var priorityQueue in m_qPriorityQueues.Reverse())
             {
@@ -22,27 +29,40 @@ namespace Scheduling
                 {
                     int processId = priorityQueue.Value.Dequeue();
                     var process = dProcessTable[processId];
+
                     if (!process.Blocked && !process.Done)
                     {
-                        process.Quantum = m_iQuantum; // עדכן את ה-quantum של התהליך
+                        // עדכון quantum של התהליך
+                        process.Quantum = m_iQuantum;
+
+                        // עדכון RemainingTime של ה-CPU
+                        m_os.CPU.RemainingTime = m_iQuantum;
+
+                        // החזרת התהליך המוכן
                         return processId;
                     }
                 }
+
             }
-            return -1; // אין תהליכים מוכנים
-            throw new NotImplementedException();
+            return -1;
+
         }
+        public PrioritizedScheduling() 
+    {
+        // אתחול ברירת מחדל
+    }
+
 
         public override void AddProcess(int iProcessId)
         {
-        int priority = OperatingSystem.GetProcessPriority(iProcessId, m_dProcessTable);
+            int priority = m_os.ProcessTable[iProcessId].Priority; // השגת העדיפות של התהליך
+
             if (!m_qPriorityQueues.ContainsKey(priority))
                 m_qPriorityQueues[priority] = new Queue<int>();
 
             m_qPriorityQueues[priority].Enqueue(iProcessId);
-
-            throw new NotImplementedException();
         }
+
 
         public override bool RescheduleAfterInterrupt()
         {

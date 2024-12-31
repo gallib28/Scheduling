@@ -13,5 +13,11 @@ namespace Scheduling
         public int ProcessId { get; set; }
         public string? TargetVariable { get; set; }
         public bool EndOfStreamReached { get; set; }
+        public ReadTokenRequest(int processId, string token)
+    {
+        ProcessId = processId;
+        Token = token;
+    }
+
     }
 }

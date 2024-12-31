@@ -22,6 +22,7 @@ namespace Scheduling
         public int Priority { get; set; }
 
         public ProcessTableEntry tableEntry { get; set; }
+        public int LastExecutionTime { get; set; }
         
         public ProcessTableEntry()
         {
@@ -34,7 +35,11 @@ namespace Scheduling
             EndTime = -1;
             MaxStarvation = 0;
             Priority = 0;
+            LastExecutionTime = 0; // אתחול ברירת מחדל
+
         }
+        
+
         
         public ProcessTableEntry(int iProcessId, string sName, Code code)
         {
@@ -49,6 +54,8 @@ namespace Scheduling
             tableEntry.EndTime = -1;
             tableEntry.MaxStarvation = 0;
             tableEntry.Priority = 0;
+            tableEntry.LastExecutionTime = 0; // אתחול ברירת מחדל
+
 
             
         }
@@ -68,6 +75,8 @@ namespace Scheduling
             this.Priority = entry.Priority;
             this.Quantum = entry.Quantum;
             this.tableEntry= entry.tableEntry; 
+            this.LastExecutionTime = entry.LastExecutionTime; // אתחול ברירת מחדל
+
         }
 
         

@@ -70,6 +70,9 @@ namespace Scheduling
             //Example2(os);
             Example3(os);
             //Example4(os);
+            // OperatingSystem os = new OperatingSystem(cpu, disk, new RoundRobin(5, os));
+            // OperatingSystem os = new OperatingSystem(cpu, disk, new FirstComeFirstServedPolicy(5, os));
+            // OperatingSystem os = new OperatingSystem(cpu, disk, new PrioritizedScheduling(5, os));
             os.ActivateScheduler();
             cpu.Execute();
             Console.WriteLine("CPU Execute started.");
